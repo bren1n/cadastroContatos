@@ -1,5 +1,5 @@
 body {
-    background-color: #a8cdff;
+    background-color: #e4e4e4;
 }
 
 .customContainer {
@@ -12,4 +12,13 @@ body {
 
 .formBtn {
     margin-right: 0.5em;
+}
+
+.contactTitle {
+    margin-bottom: 20px;
+    color: #0d6efd;
+}
+
+.contactCard {
+    line-height: 10px;
 }

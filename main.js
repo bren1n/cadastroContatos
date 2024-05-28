@@ -41,13 +41,33 @@ function registerPerson() {
         }
 
         personList.push(personObject);
+
+        alert('Contato salvo com sucesso.');
+        nameInput.value = '';
+        cpfInput.value = '';
+        birthDateInput.value = '';
+        addressInput.value = '';
+        getPersonList();
     } else {
         alert('Campos faltantes. Preencha o formulário corretamente.');
     }
 }
 
 function getPersonList() {
-    console.log(personList);
+    var contactRow = document.getElementById('contactRow');
+    contactRow.innerHTML = '';
+    if (contactRow.style.visibility == 'hidden') {
+        contactRow.style.visibility = 'visible';
+    }
+
+    personList.forEach((person) => {
+        contactRow.innerHTML += `<div class="customContainer contactCard">
+            <h4 class="contactTitle">${person.name}</h4>
+            <p><b>CPF: </b>${person.cpf}</p>
+            <p><b>Data de nascimento: </b>${person.birthDate}</p>
+            <p><b>Endereço: </b>${person.address}</p>
+        </div>`
+    });
 }
 
 function searchPersonByCpf() {
@@ -83,5 +103,6 @@ function deletePersonByCpf() {
     } else {
         personList = personList.filter(person => person.cpf != cpfToSearch);
         alert('Contato excluído com sucesso.');
+        getPersonList();
     }
 }

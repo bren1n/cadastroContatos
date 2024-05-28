@@ -34,12 +34,14 @@
                         <input required type="text" class="form-control" id="endereco" placeholder="Digite seu endereço">
                     </div>
                     <button type="button" class="btn btn-primary formBtn" onclick="registerPerson()">Cadastrar</button>
-                    <button type="button" class="btn btn-primary formBtn" onclick="getPersonList()">Exibir contatos</button>
+                    <!-- <button type="button" class="btn btn-primary formBtn" onclick="getPersonList()">Exibir contatos</button> -->
                     <button type="button" class="btn btn-primary formBtn" onclick="searchPersonByCpf()">Buscar contato</button>
                     <button type="button" class="btn btn-primary formBtn" onclick="deletePersonByCpf()">Remover contato</button>
                 </form>
             </div>
         </div>
+
+        <div class="row justify-content-center" id="contactRow" style="visibility: hidden;"></div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
